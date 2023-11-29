@@ -1,0 +1,74 @@
+{
+  "name": "hello world from input.yaml",
+  "test": "test from input.yaml",
+  "new_array": [
+    "new array from input.yaml",
+    "new array from input.yaml"
+  ],
+  "another_array": [
+    "item1 from input.yaml",
+    "item2 from input.yaml"
+  ],
+  "escape": "escape ☺ ☻",
+  "null_example": null,
+  "another_null_example": null,
+  "true_example": true,
+  "false_example": false,
+  "Object_example": {
+    "new_Object1": "new_Object1 from input.yaml",
+    "new_Object2": "new_Object2 from input.yaml",
+    "new_Object3": "new_Object3 from input.yaml"
+  },
+  "another_Object_example": {
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3"
+  },
+  "nested_object_example": {
+    "key1": "value1",
+    "key2": "value2",
+    "nested_object": {
+      "key1": "value1",
+      "key2": "value2",
+      "array": [
+        "item1",
+        "item2"
+      ]
+    }
+  },
+  "ARRAY_OF_objects": [
+    {
+      "name": "sequence1",
+      "test": "test1"
+    },
+    {
+      "name": "sequence2",
+      "test": "test2"
+    },
+    {
+      "name": "sequence3",
+      "test": "test3"
+    },
+    333
+  ],
+  "NESTED_ARRAY_EXAMPLE": [
+    "item1",
+    "item2",
+    [
+      "nested item1",
+      "nested item2",
+      "nested item3"
+    ],
+    [
+      [
+        "item1",
+        "item2",
+        "item3"
+      ]
+    ]
+  ],
+  "literal_block": "This is a literal block\n\nthis is a new line\n",
+  "folded_block": "This is a folded block this is a new line\n",
+  "literal_block_remove last line": "This is a literal block\n\nthis is a new line",
+  "folded_block_remove-last_line": "This is a folded block this is a new line"
+}
