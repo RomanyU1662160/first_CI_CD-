@@ -12,7 +12,6 @@ jobs:
       - name: echo step
         run: |
           echo "This is my first CI/CD pipeline"
-          echo "event name is :::>>> ${{github.event.name}}" 
           echo "Hello ${{ github.event_name }} 
           echo "github.event.ref ::>> "${{ github.event.ref }} 
           echo "github.event.repository::>>" ${{ github.event.repository }}
