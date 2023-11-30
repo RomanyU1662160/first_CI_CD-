@@ -1,5 +1,7 @@
 name: first-ci-cd
-on: [push]
+on:
+  push:
+    branches: ['master']
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
