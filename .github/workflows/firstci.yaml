@@ -8,3 +8,7 @@ jobs:
     steps:
       - name: print hello world
         run: echo "hello world"
+      - name: run multi-line-command
+        run: |
+          node -v
+          echo "npm version" npm -v
