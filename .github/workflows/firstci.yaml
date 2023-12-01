@@ -11,4 +11,17 @@ jobs:
       - name: run multi-line-command
         run: |
           node -v
-          echo "npm version" npm -v
+          echo "npm version" 
+          npm -v
+  parallel-job:
+    runs-on: macos-latest
+    steps:
+      - name: software version
+        run: |
+          sw_vers
+  dependant-job:
+    runs-on: windows-latest
+    needs: [run-shell-command, parallel-job]
+    steps:
+      - name: dependent job step
+        run: echo "this is a dependant job"
