@@ -1,0 +1,28 @@
+name: communicate with runner workflow
+on:
+  push:
+    branches:
+      - master
+jobs:
+  example-of-communicating-with-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: print message
+        run: |
+          echo "::error:: This is an error message"
+          echo "::warning title: Warning :: This is a warning message"
+          echo "::notice title: notice name=notice-foo::bar"
+          echo "::inputs:: This is an input message"
+      - name: group of logs
+        run: |
+          echo "::group title:Group-Logs ::This is a group message"
+          echo "This is a group message"
+          echo "::endgroup::"
+      - name: Masking-Logs
+        run: |
+          echo "::add-mask title: Mask message:: MY_SECRET"
+      - name: print-my-secret
+        run: |
+          echo  "MY_SECRET"
