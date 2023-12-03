@@ -1,0 +1,29 @@
+name: work-directories-and-shells
+on: [push]
+jobs:
+  print-working-directory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print working directory
+        run: |
+          pwd
+          ls -la
+
+      - name: print env variables
+        run: |
+          echo "::group::Environment Variables::"
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_ACTION
+          echo $GITHUB_ACTOR
+          echo $GITHUB_EVENT_NAME
+          echo "commit SHA" $GITHUB_SHA
+          echo "::endgroup::"
+  print-working-director-windows:
+    runs-on: windows-latest
+    steps:
+      - name: print working directory
+        run: |
+          echo %cd%
+          dir
+          Get-Location
